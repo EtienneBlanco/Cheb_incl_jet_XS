@@ -1,0 +1,104 @@
+/////////////////////
+//                 //
+//   Parameters    //
+//                 //
+/////////////////////
+
+//In terms of formating of this file, what counts is that the lines that set one parameter
+//begin as "name = value " (comments can be added at the end of the line)
+//If a parameter isn't set here, it will receivce a default value
+//Also, some variable have indicated dimension, changing it won't be taken into account
+
+
+//Type of evolution :
+// 0 -> pure gluons
+// 1 -> gluons and quarks
+evo = 0
+
+//Integration method used to integrate over y and pt
+//(the integration in x is always done through Gauss-Chebyshev method))
+// 0 -> Trapezoidal integration (default method)
+// 1 -> Gauss-Chebyshev integration (longer)
+// 2 -> Left Riemann sum integration
+// 3 -> Right Riemann sum integration
+integration = 0
+
+//Interpolation method used for the distributions loaded through grid
+// (not given by LHAPDF or TMDlib)
+// 0 -> linear interpolation (default method)
+// 1 -> logarithmic scale interpolation
+interp = 0
+
+//Positivity of the distributions used (PDF, TMD and FF)
+// 0 -> negative values (in the distributions) are kept
+// 1 -> negative values (in the distributions) are set to 0
+positivity = 0
+
+//Number of points in rapidity (for the differential cross section)
+Ny = 150
+//Min and Max values of the rapidity
+ymin = 0
+ymax = 10
+
+//Number of points in transverse momentum (for the differential cross section)
+Np = 500
+//Min and Max values of the transverse momentum
+ptmin = 20 [GeV]
+ptmax = 250 [GeV]
+//Min and Max values of the hard transverse momentum
+qtmin = 0 [GeV]
+qtmax = 0 [GeV]
+//if qmax is set so 0, it is not used (not cut)
+
+//Number Chebyshev polynomials (used for the integration)
+Nx = 150
+//if eps = 0, a linear bijection is used in the Chebyshev method used to evaluate the integral in x
+//if 0<eps<1, a logarithmic bijection from [eps, 1] is used (i.e it is a low-x cut-off). 
+eps = 1e-4
+
+//Center of mass energy
+S = 13000. [GeV]
+
+//temperature of the medium
+Temp = 250 [MeV]
+
+//quenching parameter
+qhat = 1. [GeV^2/fm]
+
+//jet time travelled trough the medium (linked to the size of the medium)
+t = 8 [fm]
+
+//Number of colors (Cf is then set as (Nc*Nc-1)/2/Nc)
+Nc = 3
+
+//PDF set  to be use (from LHAPDF)
+PDFset = CT10nlo
+
+//TMD set to be used (from file) for gluons (adjoint)
+TMDsetga = ../Distributions/TMD/BFKL.dat
+//TMDsetga = ../Distributions/TMD/BFKL.dat
+//TMDsetga = ../Distributions/TMD/gluefundamentalKSproton.dat
+//TMD set to be used (from file) for gluons (fundamental)
+TMDsetgf = ../Distributions/TMD/BFKL.dat
+//TMDsetgf = ../Distributions/TMD/BFKL.dat
+//TMDsetgf = ../Distributions/TMD/gluefundamentalKSproton.dat
+
+//FF grid to be used (file with header) for gluons in gluon jet
+FFsetg2g = ../Distributions/FF/cheb_avg_g2g
+//FF grid to be used (file with header) for gluons in quark singlet jet
+FFsetS2g = ../Distributions/FF/cheb_avg_S2g
+//FF grid to be used (file with header) for quark singlets in quark singlet jet
+FFsetS2S = ../Distributions/FF/cheb_avg_S2S
+//FF grid to be used (file with header) for quark singlets in gluon jet
+FFsetg2S = ../Distributions/FF/cheb_avg_g2S
+
+//filename to be used for the result grid file (without space)
+filename = Results/BFKL_10fm_cut
+//a first suffix is added to this name :
+// -'_xsAA' for the nuclear differential cross-section
+// -'_xspp' for the partonic differential cross-section
+// -'_RAA' for the nuclear modification factor
+//and a second one :
+// -'_y' when integrated over pt (i.e depending only on y)
+// -'_pt' when integrated over y (i.e depending only on pt)
+// -no suffix when not integrated (i.e depending on y and pt)
