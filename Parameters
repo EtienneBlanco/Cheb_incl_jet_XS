@@ -7,7 +7,8 @@
 //In terms of formating of this file, what counts is that the lines that set one parameter
 //begin as "name = value " (comments can be added at the end of the line)
 //If a parameter isn't set here, it will receivce a default value
-//Also, some variable have indicated dimension, changing it won't be taken into account
+//(still, be sure to give the correct path for the needed grids).
+//Also, some variable have some fixed indicated dimension (it is just an indication, changing it has no effect)
 
 
 //Type of evolution :
@@ -58,9 +59,6 @@ eps = 1e-4
 
 //Center of mass energy
 S = 13000. [GeV]
-
-//temperature of the medium
-Temp = 250 [MeV]
 
 //quenching parameter
 qhat = 1. [GeV^2/fm]

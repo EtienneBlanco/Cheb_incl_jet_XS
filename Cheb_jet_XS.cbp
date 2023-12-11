@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="jet_Cross-section" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/jet_Cross-section" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-I/home/eblanco/physics/softwares/include" />
+					<Add option="-L/home/eblanco/physics/softwares/lib" />
+					<Add option="-lLHAPDF" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/jet_Cross-section" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Cheb_jet_Chebyshev.h" />
+		<Unit filename="Cheb_jet_Distribution_classes.h" />
+		<Unit filename="Cheb_jet_Result_grid.h" />
+		<Unit filename="Cheb_jet_XS.h" />
+		<Unit filename="Cheb_jet_main.cpp" />
+		<Unit filename="Cheb_jet_Parameters.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
