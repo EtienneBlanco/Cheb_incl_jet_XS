@@ -6,7 +6,7 @@
 
 
 
-//This program calculate the single inclusive jet cross-section within hybrid factorization for nuclear collision.
+//This program calculates the single inclusive jet cross-section within hybrid factorization for nuclear collision.
 //The program is convoluting a given TMD, a given PDF with the partonic cross-section and finally with a given fragmentation function
 //(solution of the BDIM equations).
 //The partonic cross-section is based on the sum of the squared matrix elements for the following processes : g*g->g, g*q->q
