@@ -15,7 +15,7 @@ void write_header(int Ny, int Np, ofstream &grid)
     grid << "//Cross-section grid//" << endl;
     grid << "//////////////////////\n" << endl;
 
-    grid << "//This file contain grid describing the differential cross-section for single inclusive jet production in AA collisions.\n" << endl;
+    grid << "//This file contains a grid describing the differential cross-section for single inclusive jet production in AA collisions.\n" << endl;
 
     grid << "//Parameters" << endl;
     grid << "//Ny = " << Ny << endl;
